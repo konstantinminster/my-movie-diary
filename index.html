@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Diary - Search</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="">
+    <header class="flex p-10 mx-auto bg-blue-100 justify-between max-w-screen-xl">
+        <div class="uppercase">Logo</div>
+        <nav>
+            <ul class="flex gap-5">
+                <li><a href="index.html">Start</a></li>
+                <li><a href="journal.html">My Journal</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="p-10 mx-auto max-w-screen-xl">
+        <form class="flex gap-10 justify-center">
+            <input id="search-input" type="text" class="border rounded-xl w-2/4">
+            <button id="search-button" class="bg-blue-500 px-4 rounded-xl text-white">
+                Suchen
+            </button>
+        </form>
+        <div id="output">
+        </div>
+
+    </main>
+    <footer class="fixed bottom-0 p-5 bg-gray-900 w-full text-white text-center">
+        Copyright by Sebastian, Yongqi, Arthur, Konstantin</footer>
+    
+
+    <script src="main.js"></script>
+    <script src="journal.js"></script>
+</body>
+</html>
