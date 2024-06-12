@@ -75,19 +75,3 @@ function runQuery() {
   });
 }
 runQuery();
-
-// async function showData() {
-//     console.log(getMovieTitle);
-// }
-
-// setTimeout (showData, 1000);
-
-
-
-// Homepage:
-// Retrieve and display a list of popular movies from TMDB API.
-// Include a search bar at the top.
-// On submitting a search, display a dialog with the search results or feedback.
-// Each movie should display an image, name, and relevant info as a card.
-// Include a button to add the movie to favorites.
-// Add the movie to an array of objects in localStorage.
