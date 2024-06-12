@@ -33,9 +33,9 @@ function runQuery() {
             const movieObj = {
               ID: getMovieId,  
               Name: getMovieTitle, 
-              img_url: getMovieImage
+              img_url: getMovieImage,
+              comment: ""
             };
-            console.log(movieObj);
 
             //show movie card
             const output = document.getElementById("output");
@@ -61,14 +61,10 @@ function runQuery() {
             
 
             addButton.addEventListener("click", (event) => {
-              console.log("zu localstorage hinzugefügt");
-              const previousData = JSON.parse(localStorage.getItem('myJournal')) || []; 
+              const previousData = JSON.parse(localStorage.getItem('movies')) || []; 
               console.log(previousData);
-              localStorage.setItem('myJournal', JSON.stringify([...previousData, (movieObj)]));
+              localStorage.setItem('movies', JSON.stringify([...previousData, (movieObj)]));
             })
-
-
-            console.log(createCard);
           }
         }
         queryMovie()

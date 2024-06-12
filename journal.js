@@ -5,7 +5,7 @@
 
 
 (() => {
-    const getMyJournal = JSON.parse(localStorage.getItem('myJournal')) || [];
+    const getMyJournal = JSON.parse(localStorage.getItem('movies')) || [];
     console.log(getMyJournal);
     getMyJournal.forEach((element, event) => {
         const getMovieTitle = element.Name;
@@ -25,19 +25,19 @@
         createCard.appendChild(createPoster);
         createCard.appendChild(createTitle);
 
-        const removeButton = document.createElement("button");
-            removeButton.classList = "add-journal bg-black text-white";
-            removeButton.textContent = "Remove from my Journal"
-            createCard.appendChild(removeButton);
+        // const removeButton = document.createElement("button");
+        //     removeButton.classList = "add-journal bg-black text-white";
+        //     removeButton.textContent = "Add a Comment"
+        //     createCard.appendChild(removeButton);
 
 
-            removeButton.addEventListener("click", (event) => {
-                console.log("zu localstorage hinzugefügt");
-                localStorage.removeItem('myJournal', event);
-                const objects = JSON.parse(localStorage.getItem('myJournal')) || [];
-                objects.splice(event, 1); // Remove the item at the given index
-                localStorage.setItem('myJournal', JSON.stringify(objects));
-              })
+            // removeButton.addEventListener("click", (event) => {
+            //     console.log("zu localstorage hinzugefügt");
+            //     localStorage.removeItem('myJournal', event);
+            //     const objects = JSON.parse(localStorage.getItem('myJournal')) || [];
+            //     objects.splice(event, 1); // Remove the item at the given index
+            //     localStorage.setItem('myJournal', JSON.stringify(objects));
+            //   })
 
 
 });
