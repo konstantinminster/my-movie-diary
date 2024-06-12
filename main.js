@@ -40,7 +40,7 @@ function runQuery() {
             //show movie card
             const output = document.getElementById("output");
             const createCard = document.createElement("ul");
-            createCard.classList = "p-5 bg-green-500"
+            createCard.classList = "p-5 border"
             const createTitle = document.createElement("li");
             createTitle.className = "movie-title";
             createTitle.textContent = getMovieTitle;
