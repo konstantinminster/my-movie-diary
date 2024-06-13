@@ -42,7 +42,7 @@ function generateMyJournal() {
 
     const commentWindow = document.createElement("div");
     commentWindow.classList = "comment-window hidden";
-    commentWindow.innerHTML = `<textarea id="text-${getMovieID}" class="comment-textarea w-full h-20 border"></textarea>`;
+    commentWindow.innerHTML = `<textarea id="text-${getMovieID}" class="comment-textarea w-full p-2 h-20 border"></textarea>`;
     movieCard.append(commentWindow);
 
     addCommentDialogBtn.addEventListener("click", () => {

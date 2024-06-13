@@ -25,7 +25,8 @@ function runQuery() {
       .then((data) => {
         function queryMovie() {
           // LIMITS sit somewhere in the 50 requests per second range
-          for (let i = 1; i <= 10; i++) {
+         
+            for (let i = 1; i <= 10; i++) {
             const result =  data.results[i]
             const getMovieTitle = result.title;
             const getMovieId = result.id;
@@ -36,6 +37,9 @@ function runQuery() {
               img_url: getMovieImage,
               comment: ""
             };
+          
+
+         
 
             //show movie card
             const output = document.getElementById("output");
@@ -48,16 +52,17 @@ function runQuery() {
             const createPosterImg = document.createElement("img");
             createPosterImg.src = getMovieImage;
             createPoster.appendChild(createPosterImg);
-            createPoster.className = "movie-poster";
+            createPoster.classList = "movie-poster relative";
             output.appendChild(createCard);
             createCard.appendChild(createPoster);
             createCard.appendChild(createTitle);
 
             // addToJournal Button
             const addButton = document.createElement("button");
-            addButton.classList = "add-journal bg-black text-white";
-            addButton.textContent = "Add to my Journal"
-            createCard.appendChild(addButton);
+            addButton.classList = "add-journal bg-black text-white absolute p-2 bottom-2 right-2";
+            addButton.innerHTML = `<img src="https://img.icons8.com/?size=30&id=3220&format=png&color=ffffff">`;
+            //addButton.textContent = "Add to my Journal"
+            createPoster.appendChild(addButton);
             
 
             addButton.addEventListener("click", (event) => {
